@@ -4,9 +4,6 @@ $csv = new csv();
 if(isset($_POST['sub'])){
   $csv->import($_FILES['file']['tmp_name']);  
 }
-if(isset($_POST['exp'])){
-  $csv->export();
-}
 ?>
 
 <?php
@@ -67,8 +64,8 @@ session_start();
               <div class="dropdown-content">
                 <button id="myBtn" style="height: 40px; width: 100%; background-color: #fff; color: green; font-size: 18px;"><i class="fa fa-edit"></i> Create</button><br>
                 <button id="myBtn_imp" style="height: 40px; width: 100%; background-color: #fff; color: green; font-size: 18px;"><i class="fa fa-file-text"></i> Import</button>
-                <form method="post" action>
-                  <button type="submit" name="exp" value="Export" style="height: 40px; width: 100%; background-color: #fff; color: green; font-size: 18px;"><i class="fa fa-file"></i> Export</button>
+                <form method="post" action="export_scheduling.php">
+                  <button type="submit" name="export" value="Export" style="height: 40px; width: 100%; background-color: #fff; color: green; font-size: 18px;"><i class="fa fa-file"></i> Export</button>
                 </form>
                 </div>
             </div>
