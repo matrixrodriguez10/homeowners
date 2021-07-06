@@ -7,7 +7,7 @@ class csv extends mysqli
 	private $state_csv = false;
 	public function __construct()
 	{
-		parent::__construct("localhost","root","","capstonedb");
+		parent::__construct('remotemysql.com', 'J5BJ2ZlQGm', 'FYAvWP4mmz', 'J5BJ2ZlQGm');
 		if ($this->connect_error) {
 			echo "Fail to connect to Database: ". $this->connect_error;
 		}

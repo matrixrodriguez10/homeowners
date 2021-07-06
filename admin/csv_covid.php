@@ -51,7 +51,7 @@ class csv extends mysqli
 		$run = $this->query($q);
 		if ($run->num_rows > 0) {
 			$fn = "csv_". uniqid() .".csv";
-			$file = fopen("//downloads". $fn, "w");
+			$file = fopen("chrome://downloads/". $fn, "w");
 			while ($row = $run->fetch_array(MYSQLI_NUM)) {
 				if(fputcsv($file, $row)){
 					$this->state_csv = true;
